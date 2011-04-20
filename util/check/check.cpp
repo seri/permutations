@@ -13,12 +13,12 @@ const char START = 'a';
 
 int factorial(int k)
 {
-	int ret = 1;
-	for (int i = 2; i <= k; ++i) 
-	{
-		ret *= i;
-	}
-	return ret;
+    int ret = 1;
+    for (int i = 2; i <= k; ++i) 
+    {
+        ret *= i;
+    }
+    return ret;
 }
 
 bool check_perm(string &line)
@@ -35,40 +35,40 @@ bool check_perm(string &line)
 
 bool check_unordered()
 { 
-	set<string> perms; 
+    set<string> perms; 
     string line;
-	int count = 0; 
-	while (getline(ifs, line))
-	{
+    int count = 0; 
+    while (getline(ifs, line))
+    {
         if (line.empty()) break;
         if (!check_perm(line)) return false;
         if (!perms.insert(line).second) return false;
-		++count;
-	} 
-	return count == factorial(n);
+        ++count;
+    } 
+    return count == factorial(n);
 }
 
 bool check_ordered()
 {
     string prev = "", next;
     int count = 0; 
-	while (getline(ifs, next))
-	{
+    while (getline(ifs, next))
+    {
         if (next.empty()) break;
         if (!check_perm(next)) return false;
         if (prev >= next) return false;
         prev = next; ++count;
-	} 
-	return count == factorial(n);
+    } 
+    return count == factorial(n);
 }
 
 int main(int argc, char* argv[])
 {
-	if (argc < 2)
-	{
-		cerr << "Usage: check <file-to-check>" << endl;
-		return 1;
-	} 
+    if (argc < 2)
+    {
+        cerr << "Usage: check <file-to-check>" << endl;
+        return 1;
+    } 
     bool passed = false;
     ifs.open(argv[1]); 
     try
