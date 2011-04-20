@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1 plus MathML 2.0//EN"
+	"http://www.w3.org/Math/DTD/mathml2/xhtml-math11-f.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<!-- Processed by MultiMarkdown -->
+		<meta name="Format" content="complete" />
+		<title>Generating Permutations</title>
+	</head>
+<body>
+
+<h1 id="problem">Problem</h1>
+
+<p>Given <code>n</code>, generate all permutations from the string of size <code>n</code> that starts 
+with <code>'a'</code> to <code>char('a' + n)</code></p>
+
+<h1 id="solutions">Solutions</h1>
+
+<ul>
+<li><a href="http://www.cut-the-knot.org/do_you_know/AllPerm.shtml">B.Heap&#8217;s algorithm</a></li>
+<li><a href="http://www.bearcave.com/random_hacks/permute.html">University of Exeter&#8217;s algorithm</a></li>
+<li><a href="http://www.bearcave.com/random_hacks/permute.html">Bogomolny&#8217;s algorithm</a></li>
+<li><em>Spreading</em> is just natural backtracking</li>
+<li><a href="http://www.cut-the-knot.org/Curriculum/Combinatorics/JohnsonTrotter.shtml">Johnson-Trotter&#8217;s algorithm</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Factorial_number_system">Factorial number system</a></li>
+<li><a href="http://en.wikipedia.org/wiki/Factorial_number_system">Inverse selection sort</a></li>
+<li><em>Injection</em> is a natural Haskell implementation</li>
+<li>Haskell also has a <a href="http://haskell.org/ghc/docs/6.12.1/html/libraries/base-4.2.0.0/Data-List.html#v:permutations">builtin</a> function to generate permutations</li>
+<li>Someone on Haskell Cafe introduced an algorithm based on <a href="http://osdir.com/ml/lang.haskell.cafe/2002-06/msg00036.html">selections</a></li>
+</ul>
+
+<h1 id="benchmarking">Benchmarking</h1>
+
+<p>Benchmarking is done for <code>n = 11</code>. Time measured in seconds.</p>
+
+<h2 id="onmydesktop">On my desktop</h2>
+
+<table>
+<col align="left" />
+<col align="right" />
+<col align="right" />
+<col align="right" />
+<thead>
+<tr>
+	<th>Algorithm</th>
+	<th>C++</th>
+	<th>Lua</th>
+	<th>Haskell</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">HeapPermute</td>
+	<td align="right">3</td>
+	<td align="right">54</td>
+</tr>
+<tr>
+	<td align="left">Exeter</td>
+	<td align="right">3</td>
+	<td align="right">59</td>
+</tr>
+<tr>
+	<td align="left">Bogomolny</td>
+	<td align="right">7</td>
+	<td align="right">60</td>
+</tr>
+<tr>
+	<td align="left">Spreading</td>
+	<td align="right">8</td>
+	<td align="right">63</td>
+</tr>
+<tr>
+	<td align="left">JohnsonTrotter</td>
+	<td align="right">9</td>
+	<td align="right">71</td>
+</tr>
+<tr>
+	<td align="left">InverseSelect</td>
+	<td align="right">15</td>
+	<td align="right">70</td>
+</tr>
+<tr>
+	<td align="left">Factoradic</td>
+	<td align="right">21</td>
+	<td align="right">84</td>
+</tr>
+<tr>
+	<td align="left">Builtin</td>
+	<td align="right"> </td>
+	<td align="right"> </td>
+	<td align="right">16</td>
+</tr>
+<tr>
+	<td align="left">Injection</td>
+	<td align="right"> </td>
+	<td align="right"> </td>
+	<td align="right">19</td>
+</tr>
+<tr>
+	<td align="left">Select</td>
+	<td align="right"> </td>
+	<td align="right"> </td>
+	<td align="right">22</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="onmylaptop">On my laptop</h2>
+
+<table>
+<col align="left" />
+<col align="right" />
+<col align="right" />
+<col align="right" />
+<thead>
+<tr>
+	<th>Algorithm</th>
+	<th>C++</th>
+	<th>Lua</th>
+	<th>Haskell</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+	<td align="left">HeapPermute</td>
+	<td align="right">44</td>
+	<td align="right"> </td>
+</tr>
+<tr>
+	<td align="left">Exeter</td>
+	<td align="right">25</td>
+	<td align="right"> </td>
+</tr>
+<tr>
+	<td align="left">Bogomolny</td>
+	<td align="right">26</td>
+	<td align="right"> </td>
+</tr>
+<tr>
+	<td align="left">Spreading</td>
+	<td align="right">29</td>
+	<td align="right"> </td>
+</tr>
+<tr>
+	<td align="left">JohnsonTrotter</td>
+	<td align="right">26</td>
+	<td align="right"> </td>
+</tr>
+<tr>
+	<td align="left">InverseSelect</td>
+	<td align="right">42</td>
+	<td align="right"> </td>
+</tr>
+<tr>
+	<td align="left">Factoradic</td>
+	<td align="right">51</td>
+	<td align="right"> </td>
+</tr>
+<tr>
+	<td align="left">Builtin</td>
+	<td align="right"> </td>
+	<td align="right"> </td>
+	<td align="right">44</td>
+</tr>
+<tr>
+	<td align="left">Injection</td>
+	<td align="right"> </td>
+	<td align="right"> </td>
+	<td align="right">46</td>
+</tr>
+<tr>
+	<td align="left">Select</td>
+	<td align="right"> </td>
+	<td align="right"> </td>
+	<td align="right">49</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<ul>
+<li>HeapPermute is fastest</li>
+<li>Haskell performs OK </li>
+</ul>
+
+<h2 id="todo">Todo</h2>
+
+<ul>
+<li>Explain HeapPermute</li>
+</ul>
+</body>
+</html>
