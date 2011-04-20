@@ -13,7 +13,7 @@ fi
 echo BENCHMARK "$1"
 for size in `seq 10 $max`
 do
-	echo -n "n = $size ... "
-	time $1 $size permute.out
+    echo -n "n = $size ... "
+    time $1 $size permute.out
     rm permute.out
 done

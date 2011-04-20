@@ -22,7 +22,7 @@ void recurse(char c)
 
 int main(int argc, char *argv[])
 {
-	if (init(argc, argv, UNORDERED) == 0)
+    if (init(argc, argv, UNORDERED) == 0)
     {
         fill(a, a + n, 0);
         recurse(FIRST); 

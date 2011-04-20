@@ -25,7 +25,7 @@ void recurse(int i)
 
 int main(int argc, char *argv[])
 {
-	if (init(argc, argv, ORDERED) == 0)
+    if (init(argc, argv, ORDERED) == 0)
     {
         fill(b, b + 256, true);
         recurse(0); 

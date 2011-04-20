@@ -8,9 +8,9 @@ UNORDERED = false
   ORDERED = true
 
 function undo()
-	for i = 1, n do
-		a[i] = 96 + i
-	end 
+    for i = 1, n do
+        a[i] = 96 + i
+    end 
 end
 
 function optimize()
@@ -23,17 +23,17 @@ function optimize()
 end 
 
 function skeleton(ordered, body)
-	if #arg < 1 then
-		print("Usage: " .. arg[0] .. " <size> [filename]") 
+    if #arg < 1 then
+        print("Usage: " .. arg[0] .. " <size> [filename]") 
         return 1
-	end
+    end
 
-	n = tonumber(arg[1])
-	if n == nil or n < 1 or n > MAX then
-		io.stderr:write("Constraint: 1 <= size <= " .. MAX 
+    n = tonumber(arg[1])
+    if n == nil or n < 1 or n > MAX then
+        io.stderr:write("Constraint: 1 <= size <= " .. MAX 
                          .. " (got " .. n .. ")\n")
         return 1
-	end 
+    end 
 
     if #arg > 1 then
         io.output(arg[2])
@@ -57,14 +57,14 @@ function skeleton(ordered, body)
 end
 
 function output()
-	for i = 1, n do
-		io.write(string.char(a[i]))
-	end
+    for i = 1, n do
+        io.write(string.char(a[i]))
+    end
     io.write("\n")
 end
 
 --- @section Helpers
 
 function swap(i, j)
-	a[i], a[j] = a[j], a[i]
+    a[i], a[j] = a[j], a[i]
 end

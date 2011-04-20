@@ -17,13 +17,13 @@ void precompute()
 
 void trotter()
 {
-	while (true)
-	{
+    while (true)
+    {
         output(b + 1);
 
-		int maxi = 0; char maxv = 0;
-		for (int i = 1; i <= n; ++i)
-        {	
+        int maxi = 0; char maxv = 0;
+        for (int i = 1; i <= n; ++i)
+        {   
             if (b[i] > b[i + d[i]] && b[i] > maxv) 
             { 
                 maxi = i;
@@ -33,22 +33,22 @@ void trotter()
         if (maxi == 0) break; 
 
         int i = maxi + d[maxi];
-		swap(b[maxi], b[i]);
-		swap(d[maxi], d[i]);
+        swap(b[maxi], b[i]);
+        swap(d[maxi], d[i]);
 
-		for (int i = 1; i <= n; ++i)
-		{
-			if (b[i] > maxv) 
+        for (int i = 1; i <= n; ++i)
+        {
+            if (b[i] > maxv) 
             { 
                 d[i] *= (-1);
             }
-		}
-	}
+        }
+    }
 }
 
 int main(int argc, char *argv[])
 {
-	if (init(argc, argv, UNORDERED) == 0)
+    if (init(argc, argv, UNORDERED) == 0)
     { 
         precompute(); 
         trotter();       

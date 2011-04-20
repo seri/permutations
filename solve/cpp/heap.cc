@@ -2,10 +2,10 @@
 
 void recurse(int k)
 {
-	if (k == 0)
-	{
-		output();
-	} 
+    if (k == 0)
+    {
+        output();
+    } 
     else
     { 
         if (k&1) 
@@ -30,7 +30,7 @@ void recurse(int k)
 
 int main(int argc, char *argv[])
 {
-	if (init(argc, argv, UNORDERED) == 0)
+    if (init(argc, argv, UNORDERED) == 0)
     { 
         recurse(n - 1);
         return final();

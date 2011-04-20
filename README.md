@@ -36,65 +36,65 @@ On my desktop
 <table>
 <thead>
 <tr>
-	<th>Algorithm</th>
-	<th>C++</th>
-	<th>Lua</th>
-	<th>Haskell</th>
+    <th>Algorithm</th>
+    <th>C++</th>
+    <th>Lua</th>
+    <th>Haskell</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-	<td>HeapPermute</td>
-	<td>3</td>
-	<td>54</td>
+    <td>HeapPermute</td>
+    <td>3</td>
+    <td>54</td>
 </tr>
 <tr>
-	<td>Exeter</td>
-	<td>3</td>
-	<td>59</td>
+    <td>Exeter</td>
+    <td>3</td>
+    <td>59</td>
 </tr>
 <tr>
-	<td>Bogomolny</td>
-	<td>7</td>
-	<td>60</td>
+    <td>Bogomolny</td>
+    <td>7</td>
+    <td>60</td>
 </tr>
 <tr>
-	<td>Spreading</td>
-	<td>8</td>
-	<td>63</td>
+    <td>Spreading</td>
+    <td>8</td>
+    <td>63</td>
 </tr>
 <tr>
-	<td>JohnsonTrotter</td>
-	<td>9</td>
-	<td>71</td>
+    <td>JohnsonTrotter</td>
+    <td>9</td>
+    <td>71</td>
 </tr>
 <tr>
-	<td>InverseSelect</td>
-	<td>15</td>
-	<td>70</td>
+    <td>InverseSelect</td>
+    <td>15</td>
+    <td>70</td>
 </tr>
 <tr>
-	<td>Factoradic</td>
-	<td>21</td>
-	<td>84</td>
+    <td>Factoradic</td>
+    <td>21</td>
+    <td>84</td>
 </tr>
 <tr>
-	<td>Builtin</td>
-	<td> </td>
-	<td> </td>
-	<td>16</td>
+    <td>Builtin</td>
+    <td> </td>
+    <td> </td>
+    <td>16</td>
 </tr>
 <tr>
-	<td>Injection</td>
-	<td> </td>
-	<td> </td>
-	<td>19</td>
+    <td>Injection</td>
+    <td> </td>
+    <td> </td>
+    <td>19</td>
 </tr>
 <tr>
-	<td>Select</td>
-	<td> </td>
-	<td> </td>
-	<td>22</td>
+    <td>Select</td>
+    <td> </td>
+    <td> </td>
+    <td>22</td>
 </tr>
 </tbody>
 </table>
@@ -105,65 +105,65 @@ On my laptop
 <table>
 <thead>
 <tr>
-	<th>Algorithm</th>
-	<th>C++</th>
-	<th>Lua</th>
-	<th>Haskell</th>
+    <th>Algorithm</th>
+    <th>C++</th>
+    <th>Lua</th>
+    <th>Haskell</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-	<td>HeapPermute</td>
-	<td>44</td>
-	<td> </td>
+    <td>HeapPermute</td>
+    <td>44</td>
+    <td> </td>
 </tr>
 <tr>
-	<td>Exeter</td>
-	<td>25</td>
-	<td> </td>
+    <td>Exeter</td>
+    <td>25</td>
+    <td> </td>
 </tr>
 <tr>
-	<td>Bogomolny</td>
-	<td>26</td>
-	<td> </td>
+    <td>Bogomolny</td>
+    <td>26</td>
+    <td> </td>
 </tr>
 <tr>
-	<td>Spreading</td>
-	<td>29</td>
-	<td> </td>
+    <td>Spreading</td>
+    <td>29</td>
+    <td> </td>
 </tr>
 <tr>
-	<td>JohnsonTrotter</td>
-	<td>26</td>
-	<td> </td>
+    <td>JohnsonTrotter</td>
+    <td>26</td>
+    <td> </td>
 </tr>
 <tr>
-	<td>InverseSelect</td>
-	<td>42</td>
-	<td> </td>
+    <td>InverseSelect</td>
+    <td>42</td>
+    <td> </td>
 </tr>
 <tr>
-	<td>Factoradic</td>
-	<td>51</td>
-	<td> </td>
+    <td>Factoradic</td>
+    <td>51</td>
+    <td> </td>
 </tr>
 <tr>
-	<td>Builtin</td>
-	<td> </td>
-	<td> </td>
-	<td>44</td>
+    <td>Builtin</td>
+    <td> </td>
+    <td> </td>
+    <td>44</td>
 </tr>
 <tr>
-	<td>Injection</td>
-	<td> </td>
-	<td> </td>
-	<td>46</td>
+    <td>Injection</td>
+    <td> </td>
+    <td> </td>
+    <td>46</td>
 </tr>
 <tr>
-	<td>Select</td>
-	<td> </td>
-	<td> </td>
-	<td>49</td>
+    <td>Select</td>
+    <td> </td>
+    <td> </td>
+    <td>49</td>
 </tr>
 </tbody>
 </table>
