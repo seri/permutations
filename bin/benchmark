@@ -1,0 +1,19 @@
+#! /bin/sh
+
+export TIME="Time: %es - Memory: %MK"
+export TIMEFORMAT=%3lR
+
+max=12
+
+if [[ -n "$2" ]]
+then
+    max=$2
+fi
+
+echo BENCHMARK "$1"
+for size in `seq 10 $max`
+do
+	echo -n "n = $size ... "
+	time $1 $size permute.out
+    rm permute.out
+done

@@ -1,0 +1,8 @@
+#! /bin/sh
+
+dir=`dirname $0`
+
+$dir/inspect "$1"
+$dir/check "$1"
+$dir/benchmark "$1" "$2"
+

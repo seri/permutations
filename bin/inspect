@@ -1,0 +1,9 @@
+#! /bin/sh
+
+echo INSPECT "$1"
+for size in 1 2 3 4
+do
+	$1 $size
+done
+echo
+

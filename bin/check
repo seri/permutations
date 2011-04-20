@@ -1,0 +1,14 @@
+#! /bin/sh
+
+dir=`dirname $0`
+
+echo CHECK "$1"
+for size in 1 2 3 4 5 6 7 8 9
+do
+	echo -n "n = $size ... "
+	$1 $size permute.out
+	$dir/../util/check/check permute.out
+	rm permute.out
+done
+echo
+
