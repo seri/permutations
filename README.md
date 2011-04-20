@@ -178,4 +178,3 @@ Todo
 ====
 
 - Explain HeapPermute
-
