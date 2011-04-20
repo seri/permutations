@@ -168,14 +168,14 @@ On my laptop
 </tbody>
 </table>
 
-Conclusion
-==========
+Remarks
+=======
 
 - HeapPermute is fastest
-- Haskell performs OK 
+- Haskell's performance is better than expected
 
 Todo
-----
+====
 
 - Explain HeapPermute
 
