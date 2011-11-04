@@ -2,13 +2,19 @@
 
 dir=`dirname $0`
 
+checker="$dir/../util/check/check"
+if [ ! -x "$checker" ]; then
+    undo="`pwd`"
+    cd `dirname "$checker"`
+    make
+    cd "$undo"        
+fi
+
 echo CHECK "$1"
-for size in 1 2 3 4 5 6 7 8 9
-do
+for size in 1 2 3 4 5 6 7 8 9; do
     echo -n "n = $size ... "
     $1 $size permute.out
-    $dir/../util/check/check permute.out
+    "$checker" permute.out
     rm permute.out
 done
 echo
-

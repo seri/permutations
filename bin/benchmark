@@ -4,16 +4,17 @@ export TIME="Time: %es - Memory: %MK"
 export TIMEFORMAT=%3lR
 
 max=12
-
-if [[ -n "$2" ]]
-then
+if [[ -n "$2" ]]; then
     max=$2
 fi
 
 echo BENCHMARK "$1"
-for size in `seq 10 $max`
-do
+for size in `seq 10 $max`; do
     echo -n "n = $size ... "
-    time $1 $size permute.out
+    if [ -x /usr/bin/time ]; then
+        /usr/bin/time $1 $size permute.out
+    else
+        time $1 $size permute.out
+    fi 
     rm permute.out
 done

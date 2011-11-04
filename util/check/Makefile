@@ -2,4 +2,7 @@ all : check
 	
 check : check.cpp
 	g++ -o check check.cpp
-	./test check
+	sh test.sh check
+
+clean :
+	rm -f check check.exe

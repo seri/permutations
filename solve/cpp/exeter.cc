@@ -1,15 +1,11 @@
 #include "common.hh"
 
-void recurse(int k)
-{
-    if (k == 0)
-    {
+void recurse(int k) {
+    if (k == 0) {
         output();
     } 
-    else
-    { 
-        for (int i = 0; i <= k; ++i)
-        {
+    else { 
+        for (int i = 0; i <= k; ++i) {
             char temp = a[i];
             a[i] = a[k];
             a[k] = temp;
@@ -20,10 +16,8 @@ void recurse(int k)
     }
 }
 
-int main(int argc, char *argv[])
-{
-    if (init(argc, argv, UNORDERED) == 0)
-    { 
+int main(int argc, char *argv[]) {
+    if (init(argc, argv, UNORDERED) == 0) { 
         recurse(n - 1); 
         return final();
     }
