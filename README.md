@@ -14,6 +14,7 @@ Solutions
 - [Johnson-Trotter's algorithm][trotter]
 - [Factorial number system][wiki]
 - [Inverse selection sort][wiki]
+- C++ STL's `next_permutation` function
 - *Injection* is a natural Haskell implementation
 - Haskell also has a [builtin][builtin] function to generate permutations
 - Someone on Haskell Cafe introduced an algorithm based on [selections][selections]
@@ -80,7 +81,7 @@ On my desktop
 </tr>
 <tr>
     <td>Builtin</td>
-    <td> </td>
+    <td>7</td>
     <td> </td>
     <td>16</td>
 </tr>
